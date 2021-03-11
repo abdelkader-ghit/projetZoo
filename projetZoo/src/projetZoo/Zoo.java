@@ -2,12 +2,10 @@ package projetZoo;
 
 import java.util.LinkedList;
 
-import org.junit.Test;
-
 
 public class Zoo {
-	static Zoo e = new Zoo();
-	Zoo() {
+	private static Zoo z = new Zoo();//Singleton
+	private Zoo() {
 	}
 	private LinkedList<Cage> cages = new LinkedList<Cage>();
 	private LinkedList<Cabane> cabanes = new LinkedList<Cabane>();
@@ -33,14 +31,7 @@ public class Zoo {
 		this.getAnimaux().remove(a);
 	}
 	//...........................affiche des info...................... 
-	public void listingAnimal() {
-		System.out.print("Listing des animaux du zoo"+"\n");
-		System.out.print("--------------------------"+"\n");
-		for (Animal a : this.getAnimaux()) {
-			a.afficherInfos();
-		}
-	}
-
+	
 	public Piscine getPiscine() {
 		return piscine;
 	}
@@ -58,9 +49,9 @@ public class Zoo {
 		System.out.print("zoo heberge  " + this.nbAnimaux() + "animaux." + "\n");
 		
 	}
-	//design pattern
+	//design pattern Singleton
 		public static Zoo getInstance() {
-			return e;
+			return z;
 		}
 	}
 

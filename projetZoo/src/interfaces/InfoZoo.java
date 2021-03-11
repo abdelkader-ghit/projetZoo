@@ -109,6 +109,7 @@ public class InfoZoo extends JFrame {
 				mjrTablet();
 			}
 		});
+		
 		btnTortue.setBounds(170, 277, 89, 23);
 		contentPane.add(btnTortue);
 		

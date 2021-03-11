@@ -105,8 +105,9 @@ public class MenuAdmZoo extends JFrame {
 		JButton btnNewButton = new JButton("Valider");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
 				String animal = an.getSelectedItem().toString();
-				//String nom = n.getText().toString();
+				
 				
 				if(animal.equals("lion"))
 				{
@@ -172,7 +173,7 @@ public class MenuAdmZoo extends JFrame {
 				 else if(animal.equals("Tortue")){
 						
 						
-						String sql4 = "insert into perroquet (nom,age) values(?,?) ";
+						String sql4 = "insert into tortue (nom,age) values(?,?) ";
 						 try {
 							prepared = cnx.prepareStatement(sql4);
 							prepared.setString(1,n.getText().toString());
